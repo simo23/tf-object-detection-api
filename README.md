@@ -6,7 +6,7 @@ This is the official Tensorflow Object Detection API made simpler to use. With t
 
 ### Changes with respect to the original repository:
 
-- **Minimum memory requirement**: minimized the overall memory requirement by keeping only the files needed to run the Object Detection API. This repository also includes pycocotools
+- **Minimum memory requirement**: minimized the overall memory requirement to be ~22Mb by keeping only the files needed to run the Object Detection API. This repository also includes pycocotools so you do not need to download it
 - **Simpler scripts**: modified the train and eval scripts to be hopefully simpler to be used
 - **Simpler configuration**: you just need to define a single "model.config" file in ./experiments/exp_folder. The model.config file inside the exp_1 folder is the actual model.config used to create the pre-trained model of the ssd_mobilenet_v2 on COCO by Tensorflow
 - **Smarter evaluation**: while the original repository continues to evaluate and keeps only the latest N ckpts, this code saves the best ckpt accordingly to a specific metric which can be decided. The default is to save the ckpt with the best mAP but you can change it as you want. The details are in the Eval section below. 
